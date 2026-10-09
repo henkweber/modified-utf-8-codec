@@ -32,3 +32,10 @@ This library implements both rules exactly. It does not attempt to be a general-
 
 - `encodeModifiedUtf8(string): Uint8Array`
 - `decodeModifiedUtf8(Uint8Array | number[] | Iterable<number>): string`
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
