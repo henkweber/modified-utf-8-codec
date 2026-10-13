@@ -1,6 +1,6 @@
 {
   "name": "modified-utf-8-codec",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Encodes and decodes Java modified UTF-8 with null character and supplementary character handling.",
   "type": "module",
   "main": "src/index.js",
